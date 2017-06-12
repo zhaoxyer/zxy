@@ -1,0 +1,9 @@
+<view>
+  <input placeholder="请输入标题" auto-focus class="tittle" bindinput='tittlebind'/>
+  <textarea   placeholder="请输入文章内容" class="content" bindinput='contentbind'/>
+  <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap='addEssay'> 确认 </button>
+       
+</view>
+<view class="classname"> {{tittle}}</view>
+<view class="classname"> {{content}}</view>

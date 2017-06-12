@@ -1,0 +1,33 @@
+/**index.wxss**/
+.banner image{
+  width:100%;
+}
+.slide-image{
+  width:100%;
+}
+.inf image{
+  display: inline-block;
+  vertical-align: top;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%; 
+  margin-left: 10px;
+}
+.inf view{
+   margin-left: 10px;
+   display: inline-block;
+  vertical-align: top;
+  line-height: 25px;
+  font-size:14px
+}
+.inf view text{
+  display: block
+}
+.container{padding: 0;align-items: initial;color:#666666;}
+.cont{font-size: 14px;line-height: 25px;border-top:1px solid  #efeff4;padding: 0 10px;}
+.list{border-top:1px solid  #EAEAEF;border-bottom:1px solid  #efeff4;margin-top:5px;}
+.infnum view{display: inline-block;vertical-align: top;width:33%;line-height:60rpx;text-align: center;border-right:1px solid  #efeff4; }
+.infnum view:last-child{border-right: none;}
+.infnum{border-top:1px solid  #efeff4;font-size:12px;}
+.tittle{text-indent: 10px;font-size:14px;border-top:1px solid  #efeff4;line-height:30px;  }
+.addessay{width:60px;height: 60px;border-radius: 50%;border: 2px solid gray;position: fixed;bottom: 100rpx;right:10px;line-height:60px;text-align: center; font-size: 50px;color: gray;font-weight: bold;}

@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="container">
+   <view class="list" wx:for="{{essays}}">     
+      <view class="inf">
+          <image src="{{userInfo.avatarUrl}}"></image>
+          <view class="classname">
+              <text>{{item.uId.nickname}}</text>
+              <text>{{item.createTime}}</text>
+          </view>          
+      </view>
+      <view class="tittle">标题：{{item.title}}</view>
+       <view class="cont">
+       {{item.content}}         
+       </view>
+       <view class="infnum">
+          <view>阅读({{item.readnum}})</view><view>评论({{item.commnum}})</view><view 
+          bindtap="praisenum" data-essayid='{{item._id}}' data-parentId='{{item.uId._id}}'>赞({{item.praisenum}})</view>
+       </view> 
+   </view>   
+</view>
+<view class="addessay" bindtap="addEssay">+</view>
