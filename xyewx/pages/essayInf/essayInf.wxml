@@ -32,7 +32,7 @@
    <view class="pushcom" wx:if='{{comshow}}'>     
      <textarea   placeholder="请输入评论或回复内容" class="content" bindinput='contentbind'/>
       <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
-        disabled="{{disabled}}" bindtap='addCom' class='quxiao'> 取消 </button>
+        disabled="{{disabled}}" bindtap='addCom' class='quxiao' bindtap='comhide'> 取消 </button>
      <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
         disabled="{{disabled}}" bindtap='addCom'> 发表 </button>
    </view> 

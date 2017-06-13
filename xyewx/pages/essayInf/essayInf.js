@@ -114,7 +114,6 @@ Page({
   },
   comhide:function(){
     this.setData({
-          userBid:event.currentTarget.dataset.userbid,
           comshow:false
       })  
   }
