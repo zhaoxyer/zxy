@@ -41,7 +41,13 @@ Page({
    wx.navigateTo({
       url: '../addEssay/addEssay'
     }) 
- }, 
+ },
+ essayInf:function(event){
+   console.log(event.currentTarget.dataset.essayid)
+    wx.navigateTo({
+      url: '../essayInf/essayInf?essayId='+event.currentTarget.dataset.essayid
+    }) 
+ } ,
   onLoad: function () {
     var that = this
     //调用应用实例的方法获取全局数据

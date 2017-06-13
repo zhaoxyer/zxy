@@ -55,7 +55,6 @@ Page({
                               setTimeout(function(){
                                   wx.navigateBack();
                               },3000)                          
-                              return;
                          }
                            wx.showToast({
                                 title: '添加失败',

@@ -8,9 +8,9 @@
   </block>
 </swiper>
 <view class="container">
-   <view class="list" wx:for="{{essays}}">     
+   <view class="list" wx:for="{{essays}}"  data-essayid='{{item._id}}' bindtap='essayInf'>     
       <view class="inf">
-          <image src="{{userInfo.avatarUrl}}"></image>
+          <image src="{{item.uId.avatarUrl}}"></image>
           <view class="classname">
               <text>{{item.uId.nickname}}</text>
               <text>{{item.createTime}}</text>
@@ -22,7 +22,7 @@
        </view>
        <view class="infnum">
           <view>阅读({{item.readnum}})</view><view>评论({{item.commnum}})</view><view 
-          bindtap="praisenum" data-essayid='{{item._id}}' data-parentId='{{item.uId._id}}'>赞({{item.praisenum}})</view>
+          catchtap="praisenum" data-essayid='{{item._id}}' data-parentId='{{item.uId._id}}'>赞({{item.praisenum}})</view>
        </view> 
    </view>   
 </view>

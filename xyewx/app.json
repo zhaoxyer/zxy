@@ -1,12 +1,15 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/logs/logs",
+    "pages/essayInf/essayInf",
+    "pages/mine/mine",
     "pages/addEssay/addEssay"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "米拉多",
+    "navigationBarTitleText": "最美平陆",
     "navigationBarTextStyle":"black"
   }
 }
