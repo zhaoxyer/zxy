@@ -1,0 +1,38 @@
+ <view class="list">     
+      <view class="inf">
+          <image src="{{con.uId.avatarUrl}}"></image>
+          <view class="classname">
+              <text>{{con.uId.nickname}}</text>
+              <text>{{con.createTime}}</text>
+          </view>          
+      </view>
+      <view class="tittle">标题：{{con.title}}</view>
+       <view class="cont">
+       {{con.content}}         
+       </view>
+       <view class="infnum">
+          <view>阅读({{con.readnum}})</view><view bindtap="comshow">评论({{con.commnum}})</view><view 
+          catchtap="praisenum" data-essayid='{{con._id}}' data-parentId='{{con.uId._id}}'>赞({{con.praisenum}})</view>
+       </view> 
+   </view>
+   <view class="comment">
+      <view class="comlist" wx:for="{{comment}}">
+        <view class="pra" wx:if="{{item.newPraisenum}}">{{item.userAid.nickname}}赞了这个文章</view>
+        <view  wx:else    data-userbid='{{item.userAid._id}}' bindtap="setuserBid">
+             <view  class="comB" wx:if="{{item.userBid.nickname}}" >
+                 <text>{{item.userAid.nickname}}</text><text style="margin-left:10px;"> 回复：{{item.userBid.nickname}}</text><text style="margin-left:10px;">{{item.content}}</text>
+             </view>
+              <view  class="comA">
+                 <text>{{item.userAid.nickname}}：</text><text>{{item.content}}</text>
+             </view>
+        </view>
+         
+      </view>
+   </view>
+   <view class="pushcom" wx:if='{{comshow}}'>     
+     <textarea   placeholder="请输入评论或回复内容" class="content" bindinput='contentbind'/>
+      <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap='addCom' class='quxiao' bindtap='comhide'> 取消 </button>
+     <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap='addCom'> 发表 </button>
+   </view> 
